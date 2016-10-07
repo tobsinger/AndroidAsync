@@ -371,6 +371,7 @@ public class AsyncHttpClient {
                     setupAndroidProxy(newReq);
                     copyHeader(request, newReq, "User-Agent");
                     copyHeader(request, newReq, "Range");
+                    copyHeader(request, newReq, "Authorization");
                     request.logi("Redirecting");
                     newReq.logi("Redirected");
                     execute(newReq, redirectCount + 1, cancel, callback);
